@@ -1,0 +1,36 @@
+# llm-qwen-export Rules
+
+## Agent Actions After Code Changes (MUST follow)
+
+When modifying backend Python code, the agent MUST:
+1. use `conda activate qwen_export` for CLI commands in venv
+2. Run `black <changed_file>` to format
+3. Run `pytest backend/tests/<relevant_test>.py -v` for the area changed
+4. Fix any errors introduced before finishing
+
+## Git Rules (MUST follow)
+
+- Before committing: if on `main`, run `git checkout -b <branch-name>` first; never commit directly to `main`
+- When force-pushing: use `git push --force-with-lease`, never `git push --force`
+
+## Backend Stack
+
+## Code Patterns (MUST follow)
+
+## Before Acting (MUST ask user)
+
+- Before adding any new dependencies
+- Before modifying models
+- Whether backward compatibility is needed (don't assume)
+
+## Response Format (MUST follow)
+
+- Summarize current sub-task before each response per `@plan.md`
+- Suggest new session if context degrades
+
+## Code Style (SHOULD follow)
+
+- Use type hints; add docstrings for complex methods
+- Update `@extend_schema` for API docs
+
+## Domain-Specific
