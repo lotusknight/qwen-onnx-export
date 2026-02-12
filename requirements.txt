@@ -1,0 +1,11 @@
+# 核心框架
+torch>=2.1.0
+transformers>=4.37.0
+# 导出工具
+optimum[onnxruntime]>=1.17.0
+# 图优化工具
+onnx>=1.15.0
+onnxslim>=0.1.10
+# 下载增强
+huggingface_hub
+modelscope
